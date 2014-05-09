@@ -296,3 +296,75 @@ Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 13:46:14 
   MOPED: 127.0.0.1:27017 UPDATE       database=myapp_development collection=users selector={"_id"=>BSON::ObjectId('536d0605617375313f000000')} update={"$push"=>{"tweets"=>{"_id"=>BSON::ObjectId('536d08ba6173753354000000'), "description"=>"Vamos testar"}}} flags=[]
                          COMMAND      database=myapp_development command={:getlasterror=>1, :w=>1} runtime: 1.1394ms
   MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.0759ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 14:02:09 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 583ms (Views: 581.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-09 14:02:10 -0300
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2014-05-09 14:02:10 -0300
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2014-05-09 14:02:10 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-09 14:02:10 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-05-09 14:02:10 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 14:02:10 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 14:02:10 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 14:02:10 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-05-09 14:02:10 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 14:02:10 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 14:02:11 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 7.7ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-05-09 14:02:11 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-09 14:02:11 -0300
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2014-05-09 14:02:11 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-09 14:02:11 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 14:02:11 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 14:02:11 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 14:02:11 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-05-09 14:02:11 -0300
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2014-05-09 14:02:11 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 14:02:11 -0300
