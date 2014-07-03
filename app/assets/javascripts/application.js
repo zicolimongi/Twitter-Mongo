@@ -13,5 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap
+//= require  bootstrap-sprockets
 //= require_tree .
+
+
+$(window).ready( function() {
+    $(".nav.nav-tabs li a").each(function() {
+      if($(this).attr("href")==window.location.pathname){
+        $(this).parent().addClass("active");
+      }
+    });
+  });

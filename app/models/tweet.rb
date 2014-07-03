@@ -2,5 +2,5 @@ class Tweet
   include Mongoid::Document
   field :description, type: String
 
-  embedded_in :user
+  belongs_to :user, validate: true
 end

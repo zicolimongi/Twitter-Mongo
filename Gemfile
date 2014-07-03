@@ -29,7 +29,9 @@ gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 
 gem 'devise', "3.2.4"
 
-gem 'bootstrap-sass', "~> 3.1.1"
+gem 'bootstrap-sass', "~> 3.2.0"
+
+gem 'autoprefixer-rails', "~> 2.1.0"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
