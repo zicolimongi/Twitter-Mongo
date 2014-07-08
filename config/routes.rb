@@ -6,7 +6,8 @@ Rails.application.routes.draw do
 
   namespace :logged do
     resources :tweets, except: :show
-    resources :users, only: :index
+    resources :users, except: [:create,:new]
+    resources :friendships, only: [:index,:create,:destroy]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

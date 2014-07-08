@@ -52,7 +52,7 @@ class Logged::TweetsController < Logged::BaseController
   def destroy
     @tweet.destroy
     respond_to do |format|
-      format.html { redirect_to tweets_url, notice: 'Tweet was successfully destroyed.' }
+      format.html { redirect_to logged_tweets_url, notice: 'Tweet was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

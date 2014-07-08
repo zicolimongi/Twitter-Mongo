@@ -1,21 +1,27 @@
 <h1>Usuários</h1>
 
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Follow</th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th colspan="2">Actions</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><div class="btn btn-primary">Follow</div></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><div class="btn btn-success">Follow</div></td>
+            <td><%= link_to "Show", logged_user_path(user), class: "btn btn-primary" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= will_paginate @users %>
+  </div>
+</div>

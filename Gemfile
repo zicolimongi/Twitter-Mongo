@@ -35,6 +35,8 @@ gem 'autoprefixer-rails', "~> 2.1.0"
 
 gem 'simple_form', "~> 3.0.2"
 
+gem "will_paginate_mongoid"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
