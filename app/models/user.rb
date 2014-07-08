@@ -7,6 +7,7 @@ class User
 
   ## Database authenticatable
   field :email,              type: String, default: ""
+  field :name,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
 
   ## Recoverable
@@ -34,5 +35,12 @@ class User
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
 
-  has_many :tweets
+  has_many :tweets, dependent: :destroy
+
+  class << self
+    def serialize_from_session(key, salt)
+      record = to_adapter.get(key[0]["$oid"])
+      record if record && record.authenticatable_salt == salt
+    end
+end
 end

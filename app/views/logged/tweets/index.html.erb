@@ -1,0 +1,24 @@
+<h1>My Tweets</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Tweet</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tweets.each do |tweet| %>
+      <tr>
+        <td><%= tweet.description %></td>
+        <td><%= link_to 'Edit', edit_logged_tweet_path(tweet), class: "btn btn-default" %></td>
+        <td><%= link_to 'Destroy', [:logged, tweet], method: :delete, data: { confirm: 'Você tem ctz?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tweet', new_logged_tweet_path, class: "btn btn-primary" %>

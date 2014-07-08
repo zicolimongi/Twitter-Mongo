@@ -1,5 +1,5 @@
-class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+class Logged::TweetsController < Logged::BaseController
+  before_action :set_tweet, only: [:edit, :update, :destroy]
 
   # GET /tweets
   # GET /tweets.json
@@ -7,10 +7,6 @@ class TweetsController < ApplicationController
     @tweets = Tweet.where(user: current_user)
   end
 
-  # GET /tweets/1
-  # GET /tweets/1.json
-  def show
-  end
 
   # GET /tweets/new
   def new
@@ -25,10 +21,10 @@ class TweetsController < ApplicationController
   # POST /tweets.json
   def create
     @tweet = Tweet.new(tweet_params)
-    current_user.tweets.build(@tweet)
+    @tweet.user = current_user
     respond_to do |format|
       if @tweet.save
-        format.html { redirect_to @tweet, notice: 'Tweet was successfully created.' }
+        format.html { redirect_to logged_tweets_path, notice: 'Tweet was successfully created.' }
         format.json { render :show, status: :created, location: @tweet }
       else
         format.html { render :new }
@@ -42,7 +38,7 @@ class TweetsController < ApplicationController
   def update
     respond_to do |format|
       if @tweet.update(tweet_params)
-        format.html { redirect_to @tweet, notice: 'Tweet was successfully updated.' }
+        format.html { redirect_to logged_tweets_path, notice: 'Tweet was successfully updated.' }
         format.json { render :show, status: :ok, location: @tweet }
       else
         format.html { render :edit }
