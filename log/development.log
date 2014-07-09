@@ -63540,3 +63540,1262 @@ Processing by Logged::UsersController#unfollow as JSON
   MOPED: 127.0.0.1:27017 UPDATE       database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}]} update={"$pull"=>{"user_ids"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} flags=[:multi]
                          COMMAND      database=myapp_development command={:getlasterror=>1, :w=>1} runtime: 0.6539ms
 Completed 200 OK in 11ms (Views: 0.1ms)
+
+
+Started GET "/logged/users/followers" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+Processing by Logged::UsersController#followers as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6665ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7071ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bcce186e61701c51770000'), BSON::ObjectId('53bccf6b6e61701c51780000'), BSON::ObjectId('53bcd0a46e61701c51790000')]}}]}} runtime: 0.7116ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bcce186e61701c51770000'), BSON::ObjectId('53bccf6b6e61701c51780000'), BSON::ObjectId('53bcd0a46e61701c51790000')]}}]} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.7869ms
+  Rendered logged/users/followers.html.erb within layouts/logged (0.6ms)
+Completed 200 OK in 25ms (Views: 17.3ms)
+
+
+Started GET "/assets/alertify.bootstrap.css?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/alertify.core.css?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/alertify.min.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap-sprockets" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-09 02:28:46 -0300
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:28:47 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5014ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5263ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bcce186e61701c51770000'), BSON::ObjectId('53bccf6b6e61701c51780000'), BSON::ObjectId('53bcd0a46e61701c51790000')]}}]} flags=[] limit=0 skip=0 batch_size=nil fields={"followed_id"=>1} runtime: 0.6437ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[]}}} runtime: 0.6430ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>{"$in"=>[]}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.5642ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (0.3ms)
+Completed 200 OK in 23ms (Views: 14.7ms)
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:28:48 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8453ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bccc606e61701c51730000')}} runtime: 0.7251ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>BSON::ObjectId('53bccc606e61701c51730000')} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.9491ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (3.4ms)
+Completed 200 OK in 32ms (Views: 25.0ms)
+
+
+Started GET "/logged/users" for 127.0.0.1 at 2014-07-09 02:28:48 -0300
+Processing by Logged::UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6431ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"_id"=>{"$ne"=>BSON::ObjectId('53bccc606e61701c51730000')}}} runtime: 0.5719ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"_id"=>{"$ne"=>BSON::ObjectId('53bccc606e61701c51730000')}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.6951ms
+  Rendered logged/users/index.html.erb within layouts/logged (0.6ms)
+Completed 200 OK in 24ms (Views: 19.4ms)
+
+
+Started GET "/logged/users/followers" for 127.0.0.1 at 2014-07-09 02:28:49 -0300
+Processing by Logged::UsersController#followers as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5686ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bcce186e61701c51770000'), BSON::ObjectId('53bccf6b6e61701c51780000'), BSON::ObjectId('53bcd0a46e61701c51790000')]}}]}} runtime: 0.8291ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bcce186e61701c51770000'), BSON::ObjectId('53bccf6b6e61701c51780000'), BSON::ObjectId('53bcd0a46e61701c51790000')]}}]} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 1.0214ms
+  Rendered logged/users/followers.html.erb within layouts/logged (2.7ms)
+Completed 200 OK in 23ms (Views: 16.0ms)
+
+
+Started GET "/logged/users/following" for 127.0.0.1 at 2014-07-09 02:28:49 -0300
+Processing by Logged::UsersController#following as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.2624ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bccf6b6e61701c51780000')]}}]}} runtime: 0.7806ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bccf6b6e61701c51780000')]}}]} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.4830ms
+  Rendered logged/users/following.html.erb within layouts/logged (0.1ms)
+Completed 200 OK in 128ms (Views: 16.6ms)
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:28:50 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6281ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bcce186e61701c51770000'), BSON::ObjectId('53bccf6b6e61701c51780000'), BSON::ObjectId('53bcd0a46e61701c51790000')]}}]} flags=[] limit=0 skip=0 batch_size=nil fields={"followed_id"=>1} runtime: 0.5142ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[]}}} runtime: 0.6264ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>{"$in"=>[]}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.4363ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (0.5ms)
+Completed 200 OK in 25ms (Views: 18.6ms)
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:28:51 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5665ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bccc606e61701c51730000')}} runtime: 0.5524ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>BSON::ObjectId('53bccc606e61701c51730000')} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.8150ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (2.7ms)
+Completed 200 OK in 21ms (Views: 15.5ms)
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:28:52 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5915ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bcce186e61701c51770000'), BSON::ObjectId('53bccf6b6e61701c51780000'), BSON::ObjectId('53bcd0a46e61701c51790000')]}}]} flags=[] limit=0 skip=0 batch_size=nil fields={"followed_id"=>1} runtime: 0.6560ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[]}}} runtime: 0.3758ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>{"$in"=>[]}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.2625ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (0.3ms)
+Completed 200 OK in 30ms (Views: 23.9ms)
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:28:52 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.0130ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bccc606e61701c51730000')}} runtime: 0.5108ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>BSON::ObjectId('53bccc606e61701c51730000')} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 2.1383ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (1.5ms)
+Completed 200 OK in 21ms (Views: 13.2ms)
+
+
+Started GET "/logged/users" for 127.0.0.1 at 2014-07-09 02:28:54 -0300
+Processing by Logged::UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7248ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"_id"=>{"$ne"=>BSON::ObjectId('53bccc606e61701c51730000')}}} runtime: 2.0524ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"_id"=>{"$ne"=>BSON::ObjectId('53bccc606e61701c51730000')}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.8629ms
+  Rendered logged/users/index.html.erb within layouts/logged (0.5ms)
+Completed 200 OK in 24ms (Views: 16.1ms)
+
+
+Started GET "/logged/users/53bccc606e61701c51730000/edit" for 127.0.0.1 at 2014-07-09 02:28:59 -0300
+Processing by Logged::UsersController#edit as HTML
+  Parameters: {"id"=>"53bccc606e61701c51730000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.9246ms
+  Rendered logged/users/edit.html.erb within layouts/logged (8.7ms)
+Completed 200 OK in 26ms (Views: 22.9ms)
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:29:00 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8901ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bccc606e61701c51730000')}} runtime: 0.4930ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>BSON::ObjectId('53bccc606e61701c51730000')} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.4645ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (1.9ms)
+Completed 200 OK in 23ms (Views: 17.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zRq58dT+K0hLn7A64c0e3B3sv2qMRZDnnI2SBZMbzrs="}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.9425ms
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 12.3ms)
+
+
+Started GET "/assets/alertify.bootstrap.css?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/alertify.core.css?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/alertify.min.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap-sprockets" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:02 -0300
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-07-09 02:29:03 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 27ms (Views: 25.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x3exXIrgCIszDzAWs9BwM9OLUU4fNk59jVl3IZ7n1eY=", "user"=>{"email"=>"zicolimongi@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7326ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"email"=>"zicolimongi@gmail.com"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7255ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=myapp_development collection=users selector={"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')} update={"$set"=>{"current_sign_in_at"=>2014-07-09 05:29:11 UTC, "sign_in_count"=>2}} flags=[]
+                         COMMAND      database=myapp_development command={:getlasterror=>1, :w=>1} runtime: 0.6597ms
+Redirected to http://localhost:3000/
+Completed 302 Found in 95ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6936ms
+Redirected to http://localhost:3000/logged/tweets
+Completed 302 Found in 3ms
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6719ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5704ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} runtime: 0.7201ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.3640ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (0.4ms)
+Completed 200 OK in 23ms (Views: 15.7ms)
+
+
+Started GET "/assets/alertify.core.css?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/alertify.bootstrap.css?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/alertify.min.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap-sprockets" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-09 02:29:11 -0300
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:29:12 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8307ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8120ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[]}}]} flags=[] limit=0 skip=0 batch_size=nil fields={"followed_id"=>1} runtime: 0.6635ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[]}}} runtime: 0.7713ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>{"$in"=>[]}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.4769ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (0.3ms)
+Completed 200 OK in 30ms (Views: 18.1ms)
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:29:14 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6047ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} runtime: 0.5433ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.5483ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (0.5ms)
+Completed 200 OK in 24ms (Views: 18.8ms)
+
+
+Started GET "/logged/users" for 127.0.0.1 at 2014-07-09 02:29:14 -0300
+Processing by Logged::UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4735ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"_id"=>{"$ne"=>BSON::ObjectId('53bcd0a46e61701c51790000')}}} runtime: 0.4946ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"_id"=>{"$ne"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.4360ms
+  Rendered logged/users/index.html.erb within layouts/logged (0.5ms)
+Completed 200 OK in 18ms (Views: 13.3ms)
+
+
+Started GET "/logged/users/followers" for 127.0.0.1 at 2014-07-09 02:29:15 -0300
+Processing by Logged::UsersController#followers as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5510ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"$and"=>[{"_id"=>{"$in"=>[]}}]}} runtime: 0.5627ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[]}}]} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.4362ms
+  Rendered logged/users/followers.html.erb within layouts/logged (0.1ms)
+Completed 200 OK in 19ms (Views: 14.3ms)
+
+
+Started GET "/logged/users/following" for 127.0.0.1 at 2014-07-09 02:29:16 -0300
+Processing by Logged::UsersController#following as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7734ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}]}} runtime: 0.6149ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}]} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.5750ms
+  Rendered logged/users/following.html.erb within layouts/logged (0.5ms)
+Completed 200 OK in 22ms (Views: 15.2ms)
+
+
+Started GET "/logged/users/following" for 127.0.0.1 at 2014-07-09 02:29:17 -0300
+Processing by Logged::UsersController#following as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4882ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}]}} runtime: 0.4988ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}]} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.4735ms
+  Rendered logged/users/following.html.erb within layouts/logged (0.3ms)
+Completed 200 OK in 13ms (Views: 9.5ms)
+
+
+Started GET "/logged/users/followers" for 127.0.0.1 at 2014-07-09 02:29:17 -0300
+Processing by Logged::UsersController#followers as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7094ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"$and"=>[{"_id"=>{"$in"=>[]}}]}} runtime: 0.5940ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[]}}]} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.3962ms
+  Rendered logged/users/followers.html.erb within layouts/logged (0.1ms)
+Completed 200 OK in 20ms (Views: 14.0ms)
+
+
+Started GET "/logged/users/following" for 127.0.0.1 at 2014-07-09 02:29:19 -0300
+Processing by Logged::UsersController#following as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7153ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}]}} runtime: 0.8329ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}]} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.8432ms
+  Rendered logged/users/following.html.erb within layouts/logged (0.4ms)
+Completed 200 OK in 24ms (Views: 16.3ms)
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:29:19 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7547ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[]}}]} flags=[] limit=0 skip=0 batch_size=nil fields={"followed_id"=>1} runtime: 0.5689ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[]}}} runtime: 0.4286ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>{"$in"=>[]}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.3745ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (0.3ms)
+Completed 200 OK in 21ms (Views: 13.8ms)
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:30:15 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6875ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6495ms
+Completed 500 Internal Server Error in 109ms
+
+NameError (uninitialized constant Logged::TweetsController::Tweed):
+  app/controllers/logged/tweets_controller.rb:5:in `feed'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:30:24 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6615ms
+Completed 500 Internal Server Error in 13ms
+
+NoMethodError (undefined method `folowing_ids' for #<User:0x007fcc7c7b6a38>):
+  app/controllers/logged/tweets_controller.rb:5:in `feed'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.1ms)
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:30:31 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6604ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}} runtime: 0.7043ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.5889ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6890ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5643ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5397ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (106.7ms)
+Completed 200 OK in 134ms (Views: 119.6ms)
+
+
+Started GET "/assets/alertify.core.css?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/alertify.bootstrap.css?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/alertify.min.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap-sprockets" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:32 -0300
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6020ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5594ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}} runtime: 0.6261ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"$query"=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.6288ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6127ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5091ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5682ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (6.6ms)
+Completed 200 OK in 41ms (Views: 21.7ms)
+
+
+Started GET "/assets/alertify.bootstrap.css?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/alertify.core.css?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/alertify.min.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap-sprockets" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-09 02:30:47 -0300
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8370ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7202ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}} runtime: 0.6522ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"$query"=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 1.0198ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7825ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6594ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6631ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (8.6ms)
+Completed 200 OK in 32ms (Views: 22.3ms)
+
+
+Started GET "/assets/alertify.bootstrap.css?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/alertify.core.css?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/alertify.min.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap-sprockets" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2014-07-09 02:32:26 -0300
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:32:31 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7152ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6937ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}} runtime: 0.6296ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"$query"=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.7764ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7860ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7485ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5620ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (7.9ms)
+Completed 200 OK in 33ms (Views: 24.9ms)
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:32:32 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8655ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} runtime: 0.6376ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.4196ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (1.8ms)
+Completed 200 OK in 25ms (Views: 17.9ms)
+
+
+Started GET "/logged/tweets/new" for 127.0.0.1 at 2014-07-09 02:32:34 -0300
+Processing by Logged::TweetsController#new as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6332ms
+  Rendered logged/tweets/_form.html.erb (4.1ms)
+  Rendered logged/tweets/new.html.erb within layouts/logged (5.1ms)
+Completed 200 OK in 19ms (Views: 16.4ms)
+
+
+Started POST "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:32:39 -0300
+Processing by Logged::TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2gpxtTN8BgHc2EHUoEhLHYJ0eRmA5wTRsJWIE+YafW4=", "tweet"=>{"description"=>"yahuuuuuuuuuuuuuuuuuu"}, "commit"=>"Create Tweet"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8573ms
+  MOPED: 127.0.0.1:27017 INSERT       database=myapp_development collection=tweets documents=[{"_id"=>BSON::ObjectId('53bcd3f76e61701c517a0000'), "description"=>"yahuuuuuuuuuuuuuuuuuu", "user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000'), "updated_at"=>2014-07-09 05:32:39 UTC, "created_at"=>2014-07-09 05:32:39 UTC}] flags=[]
+                         COMMAND      database=myapp_development command={:getlasterror=>1, :w=>1} runtime: 0.7210ms
+Redirected to http://localhost:3000/logged/tweets
+Completed 302 Found in 10ms
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:32:39 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7138ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} runtime: 0.4864ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.4288ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (2.2ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `date' for #<Tweet:0x007fcc9060e488>):
+    15:         <% @tweets.each do |tweet| %>
+    16:           <tr>
+    17:             <td><%= tweet.description %></td>
+    18:             <td><%= tweet.date %></td>
+    19:             <td><%= link_to 'Edit', edit_logged_tweet_path(tweet), class: "btn btn-default" %></td>
+    20:             <td><%= link_to 'Destroy', [:logged, tweet], method: :delete, data: { confirm: 'Você tem ctz?' }, class: "btn btn-danger" %></td>
+    21:           </tr>
+  app/views/logged/tweets/index.html.erb:18:in `block in _app_views_logged_tweets_index_html_erb___4064556680595207034_70258286172160'
+  app/views/logged/tweets/index.html.erb:15:in `each'
+  app/views/logged/tweets/index.html.erb:15:in `_app_views_logged_tweets_index_html_erb___4064556680595207034_70258286172160'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.7ms)
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:32:51 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.0029ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} runtime: 0.4636ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.4418ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (1.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `creted_at' for #<Tweet:0x007fcc90660df0>):
+    15:         <% @tweets.each do |tweet| %>
+    16:           <tr>
+    17:             <td><%= tweet.description %></td>
+    18:             <td><%= tweet.creted_at %></td>
+    19:             <td><%= link_to 'Edit', edit_logged_tweet_path(tweet), class: "btn btn-default" %></td>
+    20:             <td><%= link_to 'Destroy', [:logged, tweet], method: :delete, data: { confirm: 'Você tem ctz?' }, class: "btn btn-danger" %></td>
+    21:           </tr>
+  app/views/logged/tweets/index.html.erb:18:in `block in _app_views_logged_tweets_index_html_erb___4064556680595207034_70258119424540'
+  app/views/logged/tweets/index.html.erb:15:in `each'
+  app/views/logged/tweets/index.html.erb:15:in `_app_views_logged_tweets_index_html_erb___4064556680595207034_70258119424540'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/francisco/.rvm/gems/ruby-2.0.0-p481@twitter-mongo/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5540ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} runtime: 0.3114ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.2799ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (2.1ms)
+Completed 200 OK in 17ms (Views: 12.9ms)
+
+
+Started GET "/assets/alertify.bootstrap.css?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/alertify.core.css?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/alertify.min.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap-sprockets" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:02 -0300
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:33:05 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8989ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7880ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} runtime: 0.7878ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.7059ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (3.1ms)
+Completed 200 OK in 29ms (Views: 19.6ms)
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:33:06 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8101ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}} runtime: 0.5316ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"$query"=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.8724ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3818ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6265ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3623ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (121.5ms)
+Completed 200 OK in 140ms (Views: 132.9ms)
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6543ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}} runtime: 0.5242ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"$query"=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}, "$orderby"=>{"created_at"=>1}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.5267ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5186ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6528ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4998ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (6.0ms)
+Completed 200 OK in 40ms (Views: 22.4ms)
+
+
+Started GET "/assets/alertify.bootstrap.css?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/alertify.core.css?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/alertify.min.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap-sprockets" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-09 02:33:25 -0300
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:34:09 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6016ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5517ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}} runtime: 0.6607ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"$query"=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.7122ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4982ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4723ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4748ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (5.2ms)
+Completed 200 OK in 142ms (Views: 20.3ms)
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:34:10 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4111ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} runtime: 0.3100ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"$query"=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.3480ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (1.3ms)
+Completed 200 OK in 19ms (Views: 15.6ms)
+
+
+Started GET "/logged/users" for 127.0.0.1 at 2014-07-09 02:34:10 -0300
+Processing by Logged::UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8693ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"_id"=>{"$ne"=>BSON::ObjectId('53bcd0a46e61701c51790000')}}} runtime: 0.7183ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"_id"=>{"$ne"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.7985ms
+  Rendered logged/users/index.html.erb within layouts/logged (1.2ms)
+Completed 200 OK in 26ms (Views: 17.4ms)
+
+
+Started GET "/logged/users/followers" for 127.0.0.1 at 2014-07-09 02:34:11 -0300
+Processing by Logged::UsersController#followers as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6735ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"$and"=>[{"_id"=>{"$in"=>[]}}]}} runtime: 0.5961ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[]}}]} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.5725ms
+  Rendered logged/users/followers.html.erb within layouts/logged (0.1ms)
+Completed 200 OK in 28ms (Views: 21.8ms)
+
+
+Started GET "/logged/users/following" for 127.0.0.1 at 2014-07-09 02:34:12 -0300
+Processing by Logged::UsersController#following as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5477ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"users", :query=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}]}} runtime: 0.6833ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}]} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.7467ms
+  Rendered logged/users/following.html.erb within layouts/logged (0.3ms)
+Completed 200 OK in 19ms (Views: 13.7ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2014-07-09 02:34:12 -0300
+Processing by HomeController#about as HTML
+  Rendered home/about.html.erb within layouts/application (0.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6749ms
+Completed 200 OK in 14ms (Views: 12.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-09 02:34:13 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7317ms
+Redirected to http://localhost:3000/logged/tweets
+Completed 302 Found in 4ms
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:34:13 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5791ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} runtime: 0.4625ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"$query"=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.5260ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (1.1ms)
+Completed 200 OK in 23ms (Views: 18.1ms)
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:34:14 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7759ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}} runtime: 0.6057ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"$query"=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.9663ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.0422ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.9951ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6438ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (10.4ms)
+Completed 200 OK in 36ms (Views: 29.9ms)
+
+
+Started GET "/logged/tweets" for 127.0.0.1 at 2014-07-09 02:34:15 -0300
+Processing by Logged::TweetsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5586ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}} runtime: 0.6497ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"$query"=>{"user_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=39 skip=0 batch_size=nil fields=nil runtime: 0.7148ms
+  Rendered logged/tweets/index.html.erb within layouts/logged (1.5ms)
+Completed 200 OK in 29ms (Views: 23.8ms)
+
+
+Started GET "/logged/tweets/feed" for 127.0.0.1 at 2014-07-09 02:34:15 -0300
+Processing by Logged::TweetsController#feed as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bcd0a46e61701c51790000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8015ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"tweets", :query=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}} runtime: 0.6378ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=tweets selector={"$query"=>{"user_id"=>{"$in"=>[BSON::ObjectId('53bccc606e61701c51730000')]}}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=30 skip=0 batch_size=nil fields=nil runtime: 0.9055ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6591ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5758ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('53bccc606e61701c51730000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5918ms
+  Rendered logged/tweets/feed.html.erb within layouts/logged (6.1ms)
+Completed 200 OK in 25ms (Views: 19.2ms)

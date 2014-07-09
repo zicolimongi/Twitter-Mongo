@@ -2,13 +2,13 @@ class Logged::TweetsController < Logged::BaseController
   before_action :set_tweet, only: [:edit, :update, :destroy]
 
   def feed
-    @tweets = Tweet.in(user_id: current_user.followers.pluck(:followed_id).map(&:followed_id)).paginate(:page => params[:page], :per_page => 30)
+    @tweets = Tweet.in(user_id: current_user.following_ids).desc("created_at").paginate(:page => params[:page], :per_page => 30)
   end
 
   # GET /tweets
   # GET /tweets.json
   def index
-    @tweets = Tweet.where(user: current_user).paginate(:page => params[:page], :per_page => 39)
+    @tweets = Tweet.where(user: current_user).desc("created_at").paginate(:page => params[:page], :per_page => 39)
   end
 
 
