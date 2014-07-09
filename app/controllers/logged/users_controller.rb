@@ -2,7 +2,15 @@ class Logged::UsersController < Logged::BaseController
   # GET /tweets
   # GET /tweets.json
   def index
-    @users = User.where(:id.ne => current_user.id).paginate(:page => params[:page], :per_page => 1)
+    @users = User.where(:id.ne => current_user.id).paginate(:page => params[:page], :per_page => 30)
+  end
+
+  def followers
+    @followers = current_user.followers.paginate(:page => params[:page], :per_page => 30)
+  end
+
+  def following
+    @followings = current_user.following.paginate(:page => params[:page], :per_page => 30)
   end
 
   def show
@@ -31,8 +39,39 @@ class Logged::UsersController < Logged::BaseController
     end
   end
 
+  def follow
+    user = User.find(follow_params[:id])
+    current_user.following_ids.push(user.id)
+    user.follower_ids.push(current_user.id)
+    respond_to do |format|
+      if current_user.save && user.save
+        format.json { render json: user.to_json }
+      else
+        format.json { render json: user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def unfollow
+    user = User.find(follow_params[:id])
+    current_user.following_ids.delete(user.id)
+    user.follower_ids.delete(current_user.id)
+    respond_to do |format|
+      if current_user.save && user.save
+        format.json { render json: user.to_json }
+      else
+        format.json { render json: user.errors, status: :unprocessable_entity }
+      end
+    end
+
+  end
+
   private
     def user_params
       params.require(:user).permit(:name,:email)
+    end
+
+    def follow_params
+      params.require(:user).permit(:id)
     end
 end

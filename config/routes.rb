@@ -5,9 +5,19 @@ Rails.application.routes.draw do
   get "/" => "home#index", as: :home
 
   namespace :logged do
-    resources :tweets, except: :show
-    resources :users, except: [:create,:new]
-    resources :friendships, only: [:index,:create,:destroy]
+    resources :tweets, except: :show do
+      collection do
+        get :feed
+      end
+    end
+    resources :users, except: [:create,:new] do
+      collection do
+        get :followers
+        get :following
+        post :follow
+        delete :unfollow
+      end
+    end
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

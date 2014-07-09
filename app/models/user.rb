@@ -26,7 +26,11 @@ class User
 
   validates :name, presence: true
 
+
+
   has_many :tweets, dependent: :destroy
+  has_and_belongs_to_many :following, class_name: "User"
+  has_and_belongs_to_many :followers, class_name: "User"
 
   class << self
     def serialize_from_session(key, salt)
@@ -35,3 +39,4 @@ class User
     end
 end
 end
+
