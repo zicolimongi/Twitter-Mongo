@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'rack-mini-profiler',group: :development
 gem "pry", group: [:development, :test]
+gem 'railroady', group: [:development]
 
 gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 
